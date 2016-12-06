@@ -7,16 +7,40 @@
 //
 
 import UIKit
+import AWSMobileHubHelper
 
 class LoginViewController: UIViewController {
 
+
+    @IBAction func LoginButton(sender: UIButton) {
+        let storyboard = UIStoryboard(name: "SignIn", bundle: nil)
+        let viewController = storyboard.instantiateViewControllerWithIdentifier("SignIn")
+        self.presentViewController(viewController, animated:true, completion:nil)
+    }
+
     @IBOutlet weak var crearNuevoUsuario: UIButton!
+    
+
+    
+    var didSignInObserver: AnyObject!
+    
+    var passwordAuthenticationCompletion: AWSTaskCompletionSource?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if AWSIdentityManager.defaultIdentityManager().loggedIn {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let viewController = storyboard.instantiateViewControllerWithIdentifier("Main")
+            self.presentViewController(viewController, animated:true, completion:nil);
+        }
 
         // Do any additional setup after loading the view.
+
+    crearNuevoUsuario.addTarget(self, action: #selector(handleUserPoolSignUp), forControlEvents: .TouchUpInside)
         
-        crearNuevoUsuario.addTarget(self, action: #selector(handleUserPoolSignUp), forControlEvents: .TouchUpInside)
+        
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,9 +60,28 @@ class LoginViewController: UIViewController {
     */
     
     func handleUserPoolSignUp () {
-        let storyboard = UIStoryboard(name: "UserPools", bundle: nil)
-        let viewController = storyboard.instantiateViewControllerWithIdentifier("SignUp")
-        self.presentViewController(viewController, animated:true, completion:nil);
+
+        if !AWSIdentityManager.defaultIdentityManager().loggedIn {
+
+            let storyboard = UIStoryboard(name: "UserPools", bundle: nil)
+            let viewController = storyboard.instantiateViewControllerWithIdentifier("SignUp")
+            self.presentViewController(viewController, animated:true, completion:nil);
+            
+        }
     }
+    
+    
+
+    
+
+    func dimissController() {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+
+    
+ 
+    
+
 
 }

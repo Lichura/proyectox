@@ -11,6 +11,7 @@ import UIKit
 class FirstLaunchViewController: UIViewController {
 
     @IBAction func LastNextButton(sender: BotonRedondo) {
+       
         presentSignInViewController()
         
     }
@@ -38,7 +39,7 @@ class FirstLaunchViewController: UIViewController {
     */
     
     func presentSignInViewController() {
-            let storyboard = UIStoryboard(name: "SignIn", bundle: nil)
+            let storyboard = UIStoryboard(name: "LogInStory", bundle: nil)
             let viewController = storyboard.instantiateViewControllerWithIdentifier("Login")
             self.presentViewController(viewController, animated: true, completion: nil)
     }
