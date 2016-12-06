@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E44F65ED1DF6E5E200523E3E /* FirstLaunch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E44F65EC1DF6E5E200523E3E /* FirstLaunch.storyboard */; };
+		E44F65EF1DF6E72F00523E3E /* FirstLaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44F65EE1DF6E72F00523E3E /* FirstLaunchViewController.swift */; };
+		E44F65F21DF6E74100523E3E /* Botones.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44F65F11DF6E74100523E3E /* Botones.swift */; };
 		E7A30F040BBEE37B00000000 /* CloudLogicAPIOperationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD70E292FE903BA00000000 /* CloudLogicAPIOperationsViewController.swift */; };
 		E7A30F040DB9290400000000 /* GoogleSymbolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DD70E298D5115E800000000 /* GoogleSymbolUtilities.framework */; };
 		E7A30F0410615DA800000000 /* UserPoolNewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD70E295B2F373C00000000 /* UserPoolNewPasswordViewController.swift */; };
@@ -146,6 +149,9 @@
 		1DD70E29FDCB70B800000000 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = MySampleApp/Sdk/Google/GoogleUtilities.framework; sourceTree = "<group>"; };
 		1DD70E29FDDE770400000000 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = MySampleApp/App/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		1DD70E29FF9B511200000000 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = MySampleApp/App/MainViewController.swift; sourceTree = SOURCE_ROOT; };
+		E44F65EC1DF6E5E200523E3E /* FirstLaunch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FirstLaunch.storyboard; sourceTree = SOURCE_ROOT; };
+		E44F65EE1DF6E72F00523E3E /* FirstLaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstLaunchViewController.swift; sourceTree = SOURCE_ROOT; };
+		E44F65F11DF6E74100523E3E /* Botones.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Botones.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +249,8 @@
 				B401C979C00EFED800000000 /* SignIn */,
 				B401C979BAC296C000000000 /* SupportingFiles */,
 				B401C979C34A3DB000000000 /* Utility */,
+				E44F65EB1DF6E5B800523E3E /* FirstLaunch */,
+
 			);
 			name = App;
 			path = mysampleapp/app;
@@ -292,6 +300,7 @@
 			children = (
 				B401C97999E577AB00000000 /* Frameworks */,
 				B401C979AA496A5C00000000 /* MySampleApp */,
+				E44F65F01DF6E73800523E3E /* Helpers */,
 				B401C97999FE4A3E00000000 /* Products */,
 			);
 			name = mainGroup;
@@ -344,6 +353,10 @@
 		B401C979C34A3DB000000000 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				1DD70E297959D6AF00000000 /* UtilityFunctions.swift */,
+			);
+			name = Utility;
+			path = mysampleapp/app/utility;
 				1DD70E297959D6AF00000000 /* UtilityFunctions.swift */,
 			);
 			name = Utility;
@@ -428,6 +441,7 @@
 				E7A30F04B7285ADA00000000 /* GoogleSignIn.bundle in Resources */,
 				E7A30F04AB7B658F00000000 /* UserPools.storyboard in Resources */,
 				E7A30F0466D7E25300000000 /* Main.storyboard in Resources */,
+				E44F65ED1DF6E5E200523E3E /* FirstLaunch.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +485,7 @@
 				E7A30F04618B3E4100000000 /* CloudLogicAPIInvokeViewController.swift in Sources */,
 				E7A30F04B254F87700000000 /* UserPoolSignUpConfirmationViewController.swift in Sources */,
 				E7A30F043F5A9A5E00000000 /* UserPoolMFAViewController.swift in Sources */,
+				E44F65EF1DF6E72F00523E3E /* FirstLaunchViewController.swift in Sources */,
 				E7A30F04A0062AAB00000000 /* AppDelegate.swift in Sources */,
 				E7A30F04B299BE2000000000 /* AWSAPI_EURYB3PQK8_ProyectoXMobileHubClient.m in Sources */,
 				E7A30F042B0D12E300000000 /* UserPoolForgotPasswordViewController.swift in Sources */,
@@ -490,6 +505,7 @@
 				E7A30F045458D3EF00000000 /* APIPathSelectorViewController.swift in Sources */,
 				E7A30F04A1BEF27C00000000 /* UserIdentityViewController.swift in Sources */,
 				E7A30F04C68E212600000000 /* AWSMobileClient.swift in Sources */,
+				E44F65F21DF6E74100523E3E /* Botones.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,8 +525,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -538,6 +556,7 @@
 				);
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = MySampleApp/AmazonAws/Bridging_Header.h;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -580,8 +599,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
