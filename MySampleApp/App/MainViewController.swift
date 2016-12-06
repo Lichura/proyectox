@@ -31,7 +31,8 @@ class MainViewController: UITableViewController {
         navigationController!.navigationBar.barTintColor = UIColor(red: 0xF5/255.0, green: 0x85/255.0, blue: 0x35/255.0, alpha: 1.0)
         navigationController!.navigationBar.tintColor = UIColor.whiteColor()
 
-            presentSignInViewController()
+            presentFirstLaunchViewController()
+            //presentSignInViewController()
         
         var demoFeature = DemoFeature.init(
             name: NSLocalizedString("User Sign-in",
@@ -104,6 +105,14 @@ class MainViewController: UITableViewController {
         }
     }
     
+    
+    func presentFirstLaunchViewController() {
+        if !AWSIdentityManager.defaultIdentityManager().loggedIn {
+            let storyboard = UIStoryboard(name: "FirstLaunch", bundle: nil)
+            let viewController = storyboard.instantiateViewControllerWithIdentifier("FirstLaunch")
+            self.presentViewController(viewController, animated: true, completion: nil)
+        }
+    }
     // MARK: - UITableViewController delegates
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
