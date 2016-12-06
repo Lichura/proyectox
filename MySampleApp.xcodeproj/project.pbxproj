@@ -254,6 +254,7 @@
 				B401C979BAC296C000000000 /* SupportingFiles */,
 				B401C979C34A3DB000000000 /* Utility */,
 				E44F65EB1DF6E5B800523E3E /* FirstLaunch */,
+
 			);
 			name = App;
 			path = mysampleapp/app;
@@ -301,15 +302,15 @@
 		B401C979A8B819B800000000 /* mainGroup */ = {
 			isa = PBXGroup;
 			children = (
-				E44F65F01DF6E73800523E3E /* Helpers */,
 				B401C97999E577AB00000000 /* Frameworks */,
-				B401C979AA496A5C00000000 /* ProyectoX */,
+				B401C979AA496A5C00000000 /* MySampleApp */,
+				E44F65F01DF6E73800523E3E /* Helpers */,
 				B401C97999FE4A3E00000000 /* Products */,
 			);
 			name = mainGroup;
 			sourceTree = "<group>";
 		};
-		B401C979AA496A5C00000000 /* ProyectoX */ = {
+		B401C979AA496A5C00000000 /* MySampleApp */ = {
 			isa = PBXGroup;
 			children = (
 				E4D676FD1DF71CE400ACEBE9 /* Login Screen */,
@@ -318,7 +319,7 @@
 				B401C97917A78F3000000000 /* Demo */,
 				1DD70E297872044800000000 /* MySampleApp.entitlements */,
 			);
-			name = ProyectoX;
+			name = MySampleApp;
 			path = mysampleapp;
 			sourceTree = "<group>";
 		};
@@ -357,6 +358,10 @@
 		B401C979C34A3DB000000000 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				1DD70E297959D6AF00000000 /* UtilityFunctions.swift */,
+			);
+			name = Utility;
+			path = mysampleapp/app/utility;
 				1DD70E297959D6AF00000000 /* UtilityFunctions.swift */,
 			);
 			name = Utility;
@@ -434,7 +439,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 218C37090000000000000000 /* Build configuration list for PBXProject "MySampleApp" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -607,7 +612,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/MySampleApp/App/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ProyectoX.Beta1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ProyectoX.MySampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -687,7 +692,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/MySampleApp/App/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ProyectoX.Beta1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ProyectoX.MySampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
