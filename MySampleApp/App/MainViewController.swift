@@ -151,7 +151,7 @@ class MainViewController: UITableViewController {
             AWSIdentityManager.defaultIdentityManager().logoutWithCompletionHandler({(result: AnyObject?, error: NSError?) -> Void in
                 self.navigationController!.popToRootViewControllerAnimated(false)
                 self.setupRightBarButtonItem()
-                    self.presentSignInViewController()
+                    self.presentFirstLaunchViewController()
             })
             // print("Logout Successful: \(signInProvider.getDisplayName)");
         } else {

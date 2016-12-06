@@ -90,7 +90,7 @@ class SignInViewController: UIViewController {
         customProviderButton.addTarget(self, action: #selector(handleCustomSignIn), forControlEvents: .TouchUpInside)
         customCreateAccountButton.addTarget(self, action: #selector(handleUserPoolSignUp), forControlEvents: .TouchUpInside)
         customForgotPasswordButton.addTarget(self, action: #selector(handleUserPoolForgotPassword), forControlEvents: .TouchUpInside)
-                customProviderButton.setImage(UIImage(named: "LoginButton"), forState: .Normal)
+        customProviderButton.setImage(UIImage(named: "LoginButton"), forState: .Normal)
     }
     
     deinit {
