@@ -27,9 +27,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="SIGN UP"/>
-                                <connections>
-                                    <segue destination="mRv-eM-Z54" kind="show" id="ST8-OO-d0v"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2EU-Bk-39x">
                                 <rect key="frame" x="16" y="539" width="343" height="56"/>
@@ -45,7 +42,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Iniciar Sesion" id="VWQ-i5-rQ2"/>
                     <connections>
-                        <outlet property="crearNuevoUsuario" destination="KyZ-Yy-NBi" id="E6Y-GY-GRU"/>
+                        <outlet property="crearNuevoUsuario" destination="KyZ-Yy-NBi" id="zf5-a6-1k2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UJo-HF-4AA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -370,7 +367,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="szZ-TP-VBx" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zCn-95-K3I">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="zCn-95-K3I">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
