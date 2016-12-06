@@ -59,7 +59,7 @@ class SignInViewController: UIViewController {
 //                AWSFacebookSignInProvider.sharedInstance().setLoginBehavior(FBSDKLoginBehavior.Web.rawValue)
                 
                 // Facebook UI Setup
-                facebookButton.addTarget(self, action: "handleFacebookLogin", forControlEvents: .TouchUpInside)
+                facebookButton.addTarget(self, action: #selector(SignInViewController.handleFacebookLogin), forControlEvents: .TouchUpInside)
                 let facebookButtonImage: UIImage? = UIImage(named: "FacebookButton")
                 if let facebookButtonImage = facebookButtonImage{
                     facebookButton.setImage(facebookButtonImage, forState: .Normal)
@@ -77,7 +77,7 @@ class SignInViewController: UIViewController {
                 AWSGoogleSignInProvider.sharedInstance().setViewControllerForGoogleSignIn(self)
                 
                 // Google UI Setup
-                googleButton.addTarget(self, action: "handleGoogleLogin", forControlEvents: .TouchUpInside)
+                googleButton.addTarget(self, action: #selector(SignInViewController.handleGoogleLogin), forControlEvents: .TouchUpInside)
                 let googleButtonImage: UIImage? = UIImage(named: "GoogleButton")
                 if let googleButtonImage = googleButtonImage {
                     googleButton.setImage(googleButtonImage, forState: .Normal)
@@ -87,9 +87,9 @@ class SignInViewController: UIViewController {
                 }
                 view.addConstraint(NSLayoutConstraint(item: googleButton, attribute: .Top, relatedBy: .Equal, toItem: anchorViewForGoogle(), attribute: .Bottom, multiplier: 1, constant: 8.0))
                 // Custom UI Setup
-                customProviderButton.addTarget(self, action: "handleCustomSignIn", forControlEvents: .TouchUpInside)
-                customCreateAccountButton.addTarget(self, action: "handleUserPoolSignUp", forControlEvents: .TouchUpInside)
-                customForgotPasswordButton.addTarget(self, action: "handleUserPoolForgotPassword", forControlEvents: .TouchUpInside)
+        customProviderButton.addTarget(self, action: #selector(handleCustomSignIn), forControlEvents: .TouchUpInside)
+        customCreateAccountButton.addTarget(self, action: #selector(handleUserPoolSignUp), forControlEvents: .TouchUpInside)
+        customForgotPasswordButton.addTarget(self, action: #selector(handleUserPoolForgotPassword), forControlEvents: .TouchUpInside)
                 customProviderButton.setImage(UIImage(named: "LoginButton"), forState: .Normal)
     }
     
