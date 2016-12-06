@@ -6,13 +6,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="HC9-2c-oGY">
             <objects>
-                <viewController id="5CA-oZ-G5P" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstLaunch" id="5CA-oZ-G5P" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Hfm-3i-BNp"/>
                         <viewControllerLayoutGuide type="bottom" id="gcq-7U-JJE"/>
@@ -21,30 +22,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="xBg-8M-65P">
-                                <rect key="frame" x="168" y="500" width="39" height="37"/>
+                            <pageControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="xBg-8M-65P">
+                                <rect key="frame" x="152" y="500" width="70" height="37"/>
                             </pageControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L78-1l-Cov" customClass="BotonRedondo" customModule="MySampleApp" customModuleProvider="target">
-                                <rect key="frame" x="150" y="600" width="46" height="30"/>
+                                <rect key="frame" x="87" y="600" width="201" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <segue destination="OmB-EM-oBD" kind="show" id="EGQ-VC-HCv"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pagina 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Zm-dL-hYp">
-                                <rect key="frame" x="16" y="51" width="343" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Compite con tus amigos" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Zm-dL-hYp">
+                                <rect key="frame" x="0.0" y="274" width="376" height="119"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.44686098740000002" green="0.70130100799999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.19607843137254902" green="0.5725490196078431" blue="0.81176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="L78-1l-Cov" firstAttribute="centerX" secondItem="tsU-WG-VZp" secondAttribute="centerX" constant="-14.5" id="1sr-nK-ILC"/>
-                            <constraint firstItem="gcq-7U-JJE" firstAttribute="top" secondItem="L78-1l-Cov" secondAttribute="bottom" constant="37" id="Cpa-nm-CuU"/>
+                            <constraint firstItem="L78-1l-Cov" firstAttribute="leading" secondItem="tsU-WG-VZp" secondAttribute="leadingMargin" constant="71" id="4xZ-4x-c1P"/>
+                            <constraint firstItem="8Zm-dL-hYp" firstAttribute="leading" secondItem="tsU-WG-VZp" secondAttribute="leading" id="4y9-JW-tws"/>
+                            <constraint firstItem="8Zm-dL-hYp" firstAttribute="top" secondItem="Hfm-3i-BNp" secondAttribute="bottom" constant="254" id="5Ll-8R-GxB"/>
+                            <constraint firstItem="L78-1l-Cov" firstAttribute="centerX" secondItem="xBg-8M-65P" secondAttribute="centerX" id="8zs-Af-ZLo"/>
                             <constraint firstItem="gcq-7U-JJE" firstAttribute="top" secondItem="xBg-8M-65P" secondAttribute="bottom" constant="130" id="RlG-it-FIJ"/>
                             <constraint firstItem="xBg-8M-65P" firstAttribute="centerX" secondItem="tsU-WG-VZp" secondAttribute="centerX" id="SSK-tW-EgT"/>
+                            <constraint firstItem="8Zm-dL-hYp" firstAttribute="centerX" secondItem="tsU-WG-VZp" secondAttribute="centerX" id="ejw-bM-1iW"/>
+                            <constraint firstItem="8Zm-dL-hYp" firstAttribute="centerY" secondItem="tsU-WG-VZp" secondAttribute="centerY" id="nJN-ah-ZfO"/>
+                            <constraint firstItem="L78-1l-Cov" firstAttribute="centerX" secondItem="8Zm-dL-hYp" secondAttribute="centerX" id="ppE-vP-3kT"/>
+                            <constraint firstItem="gcq-7U-JJE" firstAttribute="top" secondItem="L78-1l-Cov" secondAttribute="bottom" constant="37" id="rOl-yX-mBk"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -64,11 +70,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="l6g-li-ERn">
-                                <rect key="frame" x="177" y="500" width="39" height="37"/>
-                            </pageControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddj-b3-nlb" customClass="BotonRedondo" customModule="MySampleApp" customModuleProvider="target">
-                                <rect key="frame" x="173" y="600" width="46" height="30"/>
+                                <rect key="frame" x="96" y="600" width="201" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <segue destination="jNd-ge-sgD" kind="show" id="D0H-qd-2Gc"/>
@@ -81,13 +84,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="l6g-li-ERn">
+                                <rect key="frame" x="161" y="500" width="70" height="37"/>
+                            </pageControl>
                         </subviews>
-                        <color key="backgroundColor" red="0.44686098740000002" green="0.70130100799999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.1960784314" green="0.57254901960000004" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="fpC-BB-FNn" firstAttribute="top" secondItem="ddj-b3-nlb" secondAttribute="bottom" constant="37" id="AO3-BK-RRv"/>
+                            <constraint firstItem="ddj-b3-nlb" firstAttribute="centerX" secondItem="l6g-li-ERn" secondAttribute="centerX" id="5VE-6k-1C0"/>
+                            <constraint firstItem="ddj-b3-nlb" firstAttribute="leading" secondItem="car-xv-TxP" secondAttribute="leadingMargin" constant="80" id="BAf-Bv-MF1"/>
+                            <constraint firstItem="fpC-BB-FNn" firstAttribute="top" secondItem="ddj-b3-nlb" secondAttribute="bottom" constant="37" id="KGE-eh-2AK"/>
                             <constraint firstItem="l6g-li-ERn" firstAttribute="centerX" secondItem="car-xv-TxP" secondAttribute="centerX" constant="9" id="W5X-sn-lVG"/>
                             <constraint firstItem="fpC-BB-FNn" firstAttribute="top" secondItem="l6g-li-ERn" secondAttribute="bottom" constant="130" id="aHb-v5-Cpb"/>
-                            <constraint firstItem="ddj-b3-nlb" firstAttribute="centerX" secondItem="car-xv-TxP" secondAttribute="centerX" constant="8.5" id="r8L-N8-QzI"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -95,10 +102,10 @@
             </objects>
             <point key="canvasLocation" x="894" y="-75"/>
         </scene>
-        <!--View Controller-->
+        <!--First Launch View Controller-->
         <scene sceneID="7Dj-5F-8wC">
             <objects>
-                <viewController id="jNd-ge-sgD" sceneMemberID="viewController">
+                <viewController id="jNd-ge-sgD" customClass="FirstLaunchViewController" customModule="MySampleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PPN-YG-Ku1"/>
                         <viewControllerLayoutGuide type="bottom" id="v88-qd-wcg"/>
@@ -107,12 +114,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" currentPage="2" translatesAutoresizingMaskIntoConstraints="NO" id="PY4-HH-2RR">
-                                <rect key="frame" x="161" y="500" width="39" height="37"/>
-                            </pageControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5w5-WR-mvB" customClass="BotonRedondo" customModule="MySampleApp" customModuleProvider="target">
-                                <rect key="frame" x="142" y="600" width="46" height="30"/>
+                                <rect key="frame" x="80" y="600" width="200" height="30"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="LastNextButton:" destination="jNd-ge-sgD" eventType="touchUpInside" id="uY2-jF-9jS"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pagina 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BSl-51-kc0">
                                 <rect key="frame" x="16" y="53" width="343" height="21"/>
@@ -121,13 +128,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" currentPage="2" translatesAutoresizingMaskIntoConstraints="NO" id="PY4-HH-2RR">
+                                <rect key="frame" x="167.5" y="500" width="39" height="37"/>
+                            </pageControl>
                         </subviews>
-                        <color key="backgroundColor" red="0.44686098740000002" green="0.70130100799999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.1960784314" green="0.57254901960000004" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="5w5-WR-mvB" firstAttribute="centerX" secondItem="1lb-Ci-Nns" secondAttribute="centerX" constant="-22.5" id="6zR-FF-AwE"/>
-                            <constraint firstItem="PY4-HH-2RR" firstAttribute="centerX" secondItem="1lb-Ci-Nns" secondAttribute="centerX" constant="-7" id="Wca-Bv-lax"/>
-                            <constraint firstItem="v88-qd-wcg" firstAttribute="top" secondItem="5w5-WR-mvB" secondAttribute="bottom" constant="37" id="pUf-ub-903"/>
+                            <constraint firstItem="v88-qd-wcg" firstAttribute="top" secondItem="5w5-WR-mvB" secondAttribute="bottom" constant="37" id="GeX-GJ-2lc"/>
+                            <constraint firstItem="PY4-HH-2RR" firstAttribute="centerX" secondItem="1lb-Ci-Nns" secondAttribute="centerX" id="Wca-Bv-lax"/>
+                            <constraint firstItem="5w5-WR-mvB" firstAttribute="leading" secondItem="1lb-Ci-Nns" secondAttribute="leadingMargin" constant="64" id="n8c-Zy-f3I"/>
                             <constraint firstItem="v88-qd-wcg" firstAttribute="top" secondItem="PY4-HH-2RR" secondAttribute="bottom" constant="130" id="wbe-Re-Ugq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5w5-WR-mvB" secondAttribute="trailing" constant="79" id="yYo-h0-lWX"/>
                         </constraints>
                     </view>
                 </viewController>

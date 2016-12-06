@@ -44,6 +44,9 @@ extension SignInViewController: AWSCognitoIdentityInteractiveAuthenticationDeleg
     // this function handles the UI setup for initial login screen, in our case, since we are already on the login screen, we just return the View Controller instance
     func startPasswordAuthentication() -> AWSCognitoIdentityPasswordAuthentication {
         return self
+        
+        
+        
     }
     
     // prepare and setup the ViewController that manages the Multi-Factor Authentication

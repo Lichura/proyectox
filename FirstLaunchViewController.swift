@@ -10,10 +10,16 @@ import UIKit
 
 class FirstLaunchViewController: UIViewController {
 
+    @IBAction func LastNextButton(sender: BotonRedondo) {
+       
+        presentSignInViewController()
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,5 +37,11 @@ class FirstLaunchViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func presentSignInViewController() {
+            let storyboard = UIStoryboard(name: "LogInStory", bundle: nil)
+            let viewController = storyboard.instantiateViewControllerWithIdentifier("Login")
+            self.presentViewController(viewController, animated: true, completion: nil)
+    }
 
 }
