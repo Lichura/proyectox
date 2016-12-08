@@ -6,13 +6,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="HC9-2c-oGY">
             <objects>
-                <viewController id="5CA-oZ-G5P" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstLaunch" id="5CA-oZ-G5P" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Hfm-3i-BNp"/>
                         <viewControllerLayoutGuide type="bottom" id="gcq-7U-JJE"/>
@@ -24,25 +25,36 @@
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="xBg-8M-65P">
                                 <rect key="frame" x="168" y="500" width="39" height="37"/>
                             </pageControl>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tutorial_1" translatesAutoresizingMaskIntoConstraints="NO" id="Ydj-o6-Ayc">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial_1 no-btn" translatesAutoresizingMaskIntoConstraints="NO" id="Ydj-o6-Ayc">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L78-1l-Cov" customClass="BotonRedondo" customModule="MySampleApp" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L78-1l-Cov">
                                 <rect key="frame" x="92" y="537" width="190" height="63"/>
                                 <color key="backgroundColor" red="0.19534507393836975" green="0.57094329595565796" blue="0.81144076585769653" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" image="next_button" backgroundImage="bg"/>
+                                <state key="normal" image="next_button"/>
                                 <connections>
-                                    <segue destination="OmB-EM-oBD" kind="show" id="EGQ-VC-HCv"/>
+                                    <segue destination="OmB-EM-oBD" kind="show" animates="NO" id="EGQ-VC-HCv"/>
                                 </connections>
                             </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="vnG-ms-nQb">
+                                <rect key="frame" x="168" y="470" width="39" height="37"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" red="0.44686098740000002" green="0.70130100799999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="L78-1l-Cov" firstAttribute="centerX" secondItem="tsU-WG-VZp" secondAttribute="centerX" constant="-14.5" id="1sr-nK-ILC"/>
-                            <constraint firstItem="gcq-7U-JJE" firstAttribute="top" secondItem="L78-1l-Cov" secondAttribute="bottom" constant="37" id="Cpa-nm-CuU"/>
+                            <constraint firstItem="L78-1l-Cov" firstAttribute="centerX" secondItem="tsU-WG-VZp" secondAttribute="centerX" constant="-0.5" id="1sr-nK-ILC"/>
+                            <constraint firstItem="gcq-7U-JJE" firstAttribute="top" secondItem="L78-1l-Cov" secondAttribute="bottom" constant="67" id="Cpa-nm-CuU"/>
+                            <constraint firstItem="L78-1l-Cov" firstAttribute="centerX" secondItem="tsU-WG-VZp" secondAttribute="centerX" id="HQ2-nu-Jf4"/>
+                            <constraint firstItem="L78-1l-Cov" firstAttribute="centerX" secondItem="tsU-WG-VZp" secondAttribute="centerX" id="ISy-gY-UL6"/>
+                            <constraint firstItem="L78-1l-Cov" firstAttribute="top" secondItem="vnG-ms-nQb" secondAttribute="bottom" constant="30" id="Lrc-kE-Yf0"/>
                             <constraint firstItem="gcq-7U-JJE" firstAttribute="top" secondItem="xBg-8M-65P" secondAttribute="bottom" constant="130" id="RlG-it-FIJ"/>
                             <constraint firstItem="xBg-8M-65P" firstAttribute="centerX" secondItem="tsU-WG-VZp" secondAttribute="centerX" id="SSK-tW-EgT"/>
+                            <constraint firstAttribute="trailing" secondItem="Ydj-o6-Ayc" secondAttribute="trailing" id="UX8-ci-uM9"/>
+                            <constraint firstItem="vnG-ms-nQb" firstAttribute="centerX" secondItem="tsU-WG-VZp" secondAttribute="centerX" id="WX2-mP-Nn2"/>
+                            <constraint firstItem="Ydj-o6-Ayc" firstAttribute="top" secondItem="tsU-WG-VZp" secondAttribute="top" id="iu2-zq-xio"/>
+                            <constraint firstItem="vnG-ms-nQb" firstAttribute="leading" secondItem="L78-1l-Cov" secondAttribute="leading" constant="76" id="mke-ZK-3vo"/>
+                            <constraint firstItem="Ydj-o6-Ayc" firstAttribute="leading" secondItem="tsU-WG-VZp" secondAttribute="leading" id="nbJ-2i-Dn6"/>
+                            <constraint firstItem="gcq-7U-JJE" firstAttribute="top" secondItem="Ydj-o6-Ayc" secondAttribute="bottom" id="zEK-eW-Tqi"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -65,28 +77,41 @@
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="l6g-li-ERn">
                                 <rect key="frame" x="177" y="500" width="39" height="37"/>
                             </pageControl>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I9n-HT-TPI">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I9n-HT-TPI">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tutorial_2" translatesAutoresizingMaskIntoConstraints="NO" id="Qdz-G9-cap">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial_2 no-btn" translatesAutoresizingMaskIntoConstraints="NO" id="Qdz-G9-cap">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddj-b3-nlb" customClass="BotonRedondo" customModule="MySampleApp" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddj-b3-nlb">
                                 <rect key="frame" x="92" y="535" width="190" height="63"/>
                                 <state key="normal" image="next_button"/>
                                 <connections>
-                                    <segue destination="jNd-ge-sgD" kind="show" id="D0H-qd-2Gc"/>
+                                    <segue destination="jNd-ge-sgD" kind="show" animates="NO" id="D0H-qd-2Gc"/>
                                 </connections>
                             </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="5z0-ui-mPN">
+                                <rect key="frame" x="168" y="474" width="39" height="37"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" red="0.44686098740000002" green="0.70130100799999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="fpC-BB-FNn" firstAttribute="top" secondItem="ddj-b3-nlb" secondAttribute="bottom" constant="37" id="AO3-BK-RRv"/>
+                            <constraint firstItem="5z0-ui-mPN" firstAttribute="leading" secondItem="ddj-b3-nlb" secondAttribute="leading" constant="76" id="0vU-vn-WGq"/>
+                            <constraint firstItem="ddj-b3-nlb" firstAttribute="top" secondItem="5z0-ui-mPN" secondAttribute="bottom" constant="24" id="3TH-CB-xYd"/>
+                            <constraint firstItem="fpC-BB-FNn" firstAttribute="top" secondItem="Qdz-G9-cap" secondAttribute="bottom" id="4WR-ct-1vW"/>
+                            <constraint firstAttribute="trailing" secondItem="Qdz-G9-cap" secondAttribute="trailing" id="6S9-rd-UdD"/>
+                            <constraint firstItem="fpC-BB-FNn" firstAttribute="top" secondItem="ddj-b3-nlb" secondAttribute="bottom" constant="69" id="AO3-BK-RRv"/>
+                            <constraint firstItem="I9n-HT-TPI" firstAttribute="bottom" secondItem="fpC-BB-FNn" secondAttribute="top" id="Ayb-Mr-BQ7"/>
+                            <constraint firstItem="I9n-HT-TPI" firstAttribute="top" secondItem="Qdz-G9-cap" secondAttribute="top" id="DUW-dz-DkT"/>
+                            <constraint firstItem="5z0-ui-mPN" firstAttribute="centerX" secondItem="car-xv-TxP" secondAttribute="centerX" id="DzG-Ut-pQ9"/>
+                            <constraint firstItem="I9n-HT-TPI" firstAttribute="leading" secondItem="Qdz-G9-cap" secondAttribute="leading" id="FZE-y9-qmN"/>
+                            <constraint firstItem="ddj-b3-nlb" firstAttribute="centerX" secondItem="car-xv-TxP" secondAttribute="centerX" id="RWL-Hd-xLF"/>
                             <constraint firstItem="l6g-li-ERn" firstAttribute="centerX" secondItem="car-xv-TxP" secondAttribute="centerX" constant="9" id="W5X-sn-lVG"/>
                             <constraint firstItem="fpC-BB-FNn" firstAttribute="top" secondItem="l6g-li-ERn" secondAttribute="bottom" constant="130" id="aHb-v5-Cpb"/>
-                            <constraint firstItem="ddj-b3-nlb" firstAttribute="centerX" secondItem="car-xv-TxP" secondAttribute="centerX" constant="8.5" id="r8L-N8-QzI"/>
+                            <constraint firstItem="Qdz-G9-cap" firstAttribute="top" secondItem="car-xv-TxP" secondAttribute="top" id="axB-Rw-MOJ"/>
+                            <constraint firstItem="Qdz-G9-cap" firstAttribute="leading" secondItem="car-xv-TxP" secondAttribute="leading" id="mDQ-p2-ta4"/>
+                            <constraint firstItem="ddj-b3-nlb" firstAttribute="centerX" secondItem="car-xv-TxP" secondAttribute="centerX" constant="-0.5" id="r8L-N8-QzI"/>
+                            <constraint firstItem="I9n-HT-TPI" firstAttribute="trailing" secondItem="Qdz-G9-cap" secondAttribute="trailing" id="tY3-km-FG4"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -94,10 +119,10 @@
             </objects>
             <point key="canvasLocation" x="893.60000000000002" y="-75.112443778110944"/>
         </scene>
-        <!--View Controller-->
+        <!--First Launch View Controller-->
         <scene sceneID="7Dj-5F-8wC">
             <objects>
-                <viewController id="jNd-ge-sgD" sceneMemberID="viewController">
+                <viewController id="jNd-ge-sgD" customClass="FirstLaunchViewController" customModule="MySampleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PPN-YG-Ku1"/>
                         <viewControllerLayoutGuide type="bottom" id="v88-qd-wcg"/>
@@ -109,31 +134,51 @@
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" currentPage="2" translatesAutoresizingMaskIntoConstraints="NO" id="PY4-HH-2RR">
                                 <rect key="frame" x="161" y="500" width="39" height="37"/>
                             </pageControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pagina 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BSl-51-kc0">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pagina 3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BSl-51-kc0">
                                 <rect key="frame" x="16" y="53" width="343" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3WQ-CT-Zr2">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3WQ-CT-Zr2">
                                 <rect key="frame" x="-40" y="304" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Mn1-RG-MD6"/>
+                                </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tutorial_3" translatesAutoresizingMaskIntoConstraints="NO" id="xTE-A2-t1I">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial_3 no-btn" translatesAutoresizingMaskIntoConstraints="NO" id="xTE-A2-t1I">
                                 <rect key="frame" x="0.0" y="-1" width="375" height="668"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5w5-WR-mvB" customClass="BotonRedondo" customModule="MySampleApp" customModuleProvider="target">
-                                <rect key="frame" x="77" y="520" width="220" height="95"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5w5-WR-mvB">
+                                <rect key="frame" x="77" y="505" width="220" height="95"/>
                                 <state key="normal" image="start_button"/>
+                                <connections>
+                                    <action selector="LastNextButton:" destination="jNd-ge-sgD" eventType="touchUpInside" id="QDE-rc-HBR"/>
+                                </connections>
                             </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" currentPage="2" translatesAutoresizingMaskIntoConstraints="NO" id="sTn-4D-PAq">
+                                <rect key="frame" x="168" y="472" width="39" height="37"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" red="0.44686098740000002" green="0.70130100799999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="5w5-WR-mvB" firstAttribute="centerX" secondItem="1lb-Ci-Nns" secondAttribute="centerX" constant="-22.5" id="6zR-FF-AwE"/>
+                            <constraint firstItem="sTn-4D-PAq" firstAttribute="leading" secondItem="5w5-WR-mvB" secondAttribute="leading" constant="91" id="2v2-q0-1m8"/>
+                            <constraint firstItem="5w5-WR-mvB" firstAttribute="centerX" secondItem="1lb-Ci-Nns" secondAttribute="centerX" constant="-0.5" id="6zR-FF-AwE"/>
+                            <constraint firstItem="sTn-4D-PAq" firstAttribute="top" secondItem="3WQ-CT-Zr2" secondAttribute="bottom" constant="40" id="9dy-G3-qDj"/>
+                            <constraint firstItem="BSl-51-kc0" firstAttribute="centerX" secondItem="sTn-4D-PAq" secondAttribute="centerX" id="Gg9-yl-yFY"/>
+                            <constraint firstItem="xTE-A2-t1I" firstAttribute="top" secondItem="1lb-Ci-Nns" secondAttribute="top" constant="-1" id="J1n-E4-8fI"/>
+                            <constraint firstItem="v88-qd-wcg" firstAttribute="top" secondItem="xTE-A2-t1I" secondAttribute="bottom" id="RAb-T2-cPl"/>
+                            <constraint firstItem="xTE-A2-t1I" firstAttribute="leading" secondItem="1lb-Ci-Nns" secondAttribute="leading" id="SQB-03-7a2"/>
+                            <constraint firstAttribute="trailing" secondItem="xTE-A2-t1I" secondAttribute="trailing" id="Vkg-aE-kLd"/>
                             <constraint firstItem="PY4-HH-2RR" firstAttribute="centerX" secondItem="1lb-Ci-Nns" secondAttribute="centerX" constant="-7" id="Wca-Bv-lax"/>
-                            <constraint firstItem="v88-qd-wcg" firstAttribute="top" secondItem="5w5-WR-mvB" secondAttribute="bottom" constant="37" id="pUf-ub-903"/>
+                            <constraint firstItem="BSl-51-kc0" firstAttribute="top" secondItem="PPN-YG-Ku1" secondAttribute="bottom" constant="33" id="eVG-6Q-Q3d"/>
+                            <constraint firstItem="3WQ-CT-Zr2" firstAttribute="leading" secondItem="1lb-Ci-Nns" secondAttribute="leadingMargin" constant="-56" id="gEa-jX-KZf"/>
+                            <constraint firstItem="v88-qd-wcg" firstAttribute="top" secondItem="5w5-WR-mvB" secondAttribute="bottom" constant="67" id="pUf-ub-903"/>
+                            <constraint firstItem="BSl-51-kc0" firstAttribute="leading" secondItem="1lb-Ci-Nns" secondAttribute="leadingMargin" id="qpY-8B-vZU"/>
+                            <constraint firstItem="v88-qd-wcg" firstAttribute="top" secondItem="sTn-4D-PAq" secondAttribute="bottom" constant="158" id="sPL-6t-n3i"/>
+                            <constraint firstItem="sTn-4D-PAq" firstAttribute="centerX" secondItem="1lb-Ci-Nns" secondAttribute="centerX" id="tce-2P-F7M"/>
+                            <constraint firstItem="5w5-WR-mvB" firstAttribute="centerX" secondItem="1lb-Ci-Nns" secondAttribute="centerX" id="vNr-bQ-YWL"/>
+                            <constraint firstItem="3WQ-CT-Zr2" firstAttribute="trailing" secondItem="PY4-HH-2RR" secondAttribute="trailing" id="vyY-bw-0o4"/>
                             <constraint firstItem="v88-qd-wcg" firstAttribute="top" secondItem="PY4-HH-2RR" secondAttribute="bottom" constant="130" id="wbe-Re-Ugq"/>
                         </constraints>
                     </view>
@@ -144,11 +189,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bg" width="375" height="667"/>
         <image name="next_button" width="190" height="63"/>
         <image name="start_button" width="220" height="95"/>
-        <image name="tutorial_1" width="375" height="667"/>
-        <image name="tutorial_2" width="375" height="667"/>
-        <image name="tutorial_3" width="375" height="667"/>
+        <image name="tutorial_1 no-btn" width="375" height="667"/>
+        <image name="tutorial_2 no-btn" width="375" height="667"/>
+        <image name="tutorial_3 no-btn" width="375" height="667"/>
     </resources>
 </document>
