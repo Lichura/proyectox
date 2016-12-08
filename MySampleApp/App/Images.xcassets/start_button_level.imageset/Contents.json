@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "splashscreen.png",
+      "filename" : "start_button_level.png",
       "scale" : "1x"
     },
     {
