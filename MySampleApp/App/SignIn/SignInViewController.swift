@@ -90,7 +90,7 @@ class SignInViewController: UIViewController {
         customProviderButton.addTarget(self, action: #selector(handleCustomSignIn), forControlEvents: .TouchUpInside)
         customCreateAccountButton.addTarget(self, action: #selector(handleUserPoolSignUp), forControlEvents: .TouchUpInside)
         customForgotPasswordButton.addTarget(self, action: #selector(handleUserPoolForgotPassword), forControlEvents: .TouchUpInside)
-                customProviderButton.setImage(UIImage(named: "LoginButton"), forState: .Normal)
+        customProviderButton.setImage(UIImage(named: "LoginButton"), forState: .Normal)
     }
     
     deinit {
@@ -108,7 +108,11 @@ class SignInViewController: UIViewController {
             // If no error reported by SignInProvider, discard the sign-in view controller.
             if error == nil {
                 dispatch_async(dispatch_get_main_queue(),{
+                    let storyboard = UIStoryboard(name: "LogInStory", bundle: nil)
+                    let viewController = storyboard.instantiateViewControllerWithIdentifier("Login")
                     self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+                    viewController.dismissViewControllerAnimated(false, completion: nil)
+                    
                 })
             }
              print("result = \(result), error = \(error)")

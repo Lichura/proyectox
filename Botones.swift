@@ -9,7 +9,10 @@
 import Foundation
 import UIKit
 
+let colorAzulPrincipal = UIColor(red: 50/255, green: 146/255, blue: 207/255, alpha: 1.0)
+
 class BotonRedondo: UIButton{
+    
     
     var myValue: Int
     
@@ -22,7 +25,7 @@ class BotonRedondo: UIButton{
         backgroundColor = .whiteColor()
         frame.size = CGSize(width: 200, height: 30)
         layer.cornerRadius = 15
-        setTitleColor(.whiteColor(), forState: .Normal)
+        setTitleColor(colorAzulPrincipal, forState: .Normal)
     }
     
     

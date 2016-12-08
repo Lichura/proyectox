@@ -156,7 +156,9 @@
                             <constraint firstItem="T6t-nK-GpM" firstAttribute="width" secondItem="mou-mq-q0x" secondAttribute="width" id="wrl-6Y-vOh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="yqR-HB-jEf"/>
+                    <navigationItem key="navigationItem" title="Log In" id="7qn-ka-GsD">
+                        <barButtonItem key="leftBarButtonItem" title="Volver" id="zSk-vM-NVJ"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="anchorView" destination="jAO-db-UaA" id="v3U-kz-ClL"/>
                         <outlet property="customCreateAccountButton" destination="fgZ-Wa-Fth" id="YJo-FJ-WzT"/>
@@ -173,7 +175,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K3V-Vr-oX2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="911.25" y="455.28169014084506"/>
+            <point key="canvasLocation" x="-586" y="80"/>
         </scene>
     </scenes>
 </document>
