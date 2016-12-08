@@ -10,8 +10,11 @@ import UIKit
 
 class FirstLaunchViewController: UIViewController {
 
+    
+    var vista = Vistas()
+    
     @IBAction func LastNextButton(sender: UIButton) {
-        presentSignInViewController()
+        vista.cambiarVista("LogInStory", vista: "Login", vistaActual: self)
     }
 
     override func viewDidLoad() {
@@ -37,10 +40,6 @@ class FirstLaunchViewController: UIViewController {
     }
     */
     
-    func presentSignInViewController() {
-            let storyboard = UIStoryboard(name: "LogInStory", bundle: nil)
-            let viewController = storyboard.instantiateViewControllerWithIdentifier("Login")
-            self.presentViewController(viewController, animated: true, completion: nil)
-    }
+
 
 }
