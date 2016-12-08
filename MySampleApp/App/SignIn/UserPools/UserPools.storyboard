@@ -554,30 +554,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gTZ-Hp-YND">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="new_password-1" translatesAutoresizingMaskIntoConstraints="NO" id="VOO-6N-Hy9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gTZ-Hp-YND">
                                 <rect key="frame" x="20" y="20" width="560" height="0.0"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" id="wGM-VD-dBf"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirmation Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i4Y-cH-I2g">
-                                <rect key="frame" x="21" y="51" width="560" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Confirmation Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4K-cS-Vq9">
-                                <rect key="frame" x="21" y="28" width="114" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="Epu-dm-DVo"/>
-                                    <constraint firstAttribute="width" constant="114" id="u30-yg-4cD"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="New Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z3P-gN-5hx">
-                                <rect key="frame" x="20" y="89" width="107" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Nueva contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z3P-gN-5hx">
+                                <rect key="frame" x="56" y="309" width="107" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="107" id="EGD-6p-bfc"/>
                                     <constraint firstAttribute="height" constant="21" id="qD6-Q6-YFM"/>
@@ -586,51 +575,40 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jky-4u-gce">
-                                <rect key="frame" x="21" y="150" width="560" height="34"/>
-                                <color key="backgroundColor" red="0.88235294117647056" green="0.2627450980392157" blue="0.098039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Update Password">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jky-4u-gce">
+                                <rect key="frame" x="2" y="461" width="395" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="new_pass_button">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="onUpdatePassword:" destination="s3d-oM-nuL" eventType="touchUpInside" id="omc-aV-nmw"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Amd-lK-9WN">
-                                <rect key="frame" x="21" y="112" width="560" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Amd-lK-9WN">
+                                <rect key="frame" x="56" y="338" width="287" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLi-tt-wve">
-                                <rect key="frame" x="277" y="562" width="48" height="30"/>
-                                <state key="normal" title="Cancel"/>
-                                <connections>
-                                    <action selector="onCancel:" destination="s3d-oM-nuL" eventType="touchUpInside" id="EZU-rc-bmK"/>
-                                </connections>
-                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i4Y-cH-I2g">
+                                <rect key="frame" x="56" y="226" width="287" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Código de confirmación" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4K-cS-Vq9">
+                                <rect key="frame" x="56" y="197" width="136" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Epu-dm-DVo"/>
+                                    <constraint firstAttribute="width" constant="114" id="u30-yg-4cD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="Jky-4u-gce" firstAttribute="top" secondItem="Amd-lK-9WN" secondAttribute="bottom" constant="8" symbolic="YES" id="3xd-1M-Qf2"/>
-                            <constraint firstItem="z3P-gN-5hx" firstAttribute="leading" secondItem="gTZ-Hp-YND" secondAttribute="leading" id="Btw-5k-gya"/>
-                            <constraint firstItem="gTZ-Hp-YND" firstAttribute="leading" secondItem="f7M-ef-d3N" secondAttribute="leadingMargin" id="De6-x5-GGM"/>
-                            <constraint firstItem="i4Y-cH-I2g" firstAttribute="leading" secondItem="Amd-lK-9WN" secondAttribute="leading" id="Ihi-zz-J2S"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="i4Y-cH-I2g" secondAttribute="trailing" constant="-1" id="LaQ-oD-Moi"/>
-                            <constraint firstItem="i4Y-cH-I2g" firstAttribute="trailing" secondItem="Amd-lK-9WN" secondAttribute="trailing" id="MQA-tc-vLO"/>
-                            <constraint firstItem="K4K-cS-Vq9" firstAttribute="top" secondItem="gTZ-Hp-YND" secondAttribute="bottom" constant="8" symbolic="YES" id="T03-Wa-ACZ"/>
-                            <constraint firstItem="Amd-lK-9WN" firstAttribute="leading" secondItem="Jky-4u-gce" secondAttribute="leading" id="Yed-j6-uVY"/>
-                            <constraint firstItem="z3P-gN-5hx" firstAttribute="top" secondItem="i4Y-cH-I2g" secondAttribute="bottom" constant="8" symbolic="YES" id="a5O-1E-pQ6"/>
-                            <constraint firstItem="Amd-lK-9WN" firstAttribute="top" secondItem="z3P-gN-5hx" secondAttribute="bottom" constant="2" id="b1G-ON-2gT"/>
-                            <constraint firstItem="Amd-lK-9WN" firstAttribute="trailing" secondItem="Jky-4u-gce" secondAttribute="trailing" id="bfQ-pg-d29"/>
-                            <constraint firstItem="lfy-tb-FOG" firstAttribute="top" secondItem="NLi-tt-wve" secondAttribute="bottom" constant="8" symbolic="YES" id="gmY-z0-RrD"/>
-                            <constraint firstItem="NLi-tt-wve" firstAttribute="centerX" secondItem="Jky-4u-gce" secondAttribute="centerX" id="kT2-4A-yyg"/>
-                            <constraint firstItem="K4K-cS-Vq9" firstAttribute="leading" secondItem="i4Y-cH-I2g" secondAttribute="leading" id="lGp-kB-mQE"/>
-                            <constraint firstItem="gTZ-Hp-YND" firstAttribute="top" secondItem="ugx-3t-FYa" secondAttribute="bottom" id="qiZ-jF-1Sc"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="gTZ-Hp-YND" secondAttribute="trailing" id="wh5-t3-qHx"/>
-                            <constraint firstItem="K4K-cS-Vq9" firstAttribute="leading" secondItem="f7M-ef-d3N" secondAttribute="leadingMargin" constant="1" id="xUI-d4-sTb"/>
-                            <constraint firstItem="i4Y-cH-I2g" firstAttribute="top" secondItem="K4K-cS-Vq9" secondAttribute="bottom" constant="2" id="yIk-h7-IDG"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Uvr-H2-1FT"/>
                     <connections>
@@ -640,11 +618,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BDM-vN-umJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="569" y="744"/>
+            <point key="canvasLocation" x="568.79999999999995" y="743.47826086956525"/>
         </scene>
     </scenes>
     <resources>
         <image name="forgot password no-btn" width="375" height="667"/>
+        <image name="new_pass_button" width="253" height="63"/>
+        <image name="new_password-1" width="375" height="667"/>
         <image name="next_yellow" width="255" height="65"/>
         <image name="send_button" width="253" height="63"/>
         <image name="sign up_1-1" width="375" height="667"/>
