@@ -54,11 +54,8 @@
 	</dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
-<<<<<<< HEAD
-=======
 	<key>CFBundleDisplayName</key>
 	<string>ProyectoX</string>
->>>>>>> 1c17e6845a9f42bfa71c145b65292d753790975a
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
