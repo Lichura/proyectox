@@ -10,17 +10,16 @@ import UIKit
 import AWSMobileHubHelper
 
 class LoginViewController: UIViewController {
-
+    
+    var vista = Vistas()
 
     @IBAction func LoginButton(sender: UIButton) {
-        let storyboard = UIStoryboard(name: "SignIn", bundle: nil)
-        let viewController = storyboard.instantiateViewControllerWithIdentifier("SignIn")
-        self.presentViewController(viewController, animated:true, completion:nil)
+        vista.cambiarVista("SignIn", vista: "SignIn", vistaActual: self)
+
+        
     }
 
     @IBOutlet weak var crearNuevoUsuario: UIButton!
-    
-
     
     var didSignInObserver: AnyObject!
     
@@ -28,26 +27,22 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Do any additional setup after loading the view.
         
         if AWSIdentityManager.defaultIdentityManager().loggedIn {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let viewController = storyboard.instantiateViewControllerWithIdentifier("Main")
-            self.presentViewController(viewController, animated:true, completion:nil);
+            vista.cambiarVista("Main", vista: "Main", vistaActual: self)
         }
 
-        // Do any additional setup after loading the view.
-
-    crearNuevoUsuario.addTarget(self, action: #selector(handleUserPoolSignUp), forControlEvents: .TouchUpInside)
-        
-        
-
+        crearNuevoUsuario.addTarget(self, action: #selector(handleUserPoolSignUp), forControlEvents: .TouchUpInside)
     }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+
 
     /*
     // MARK: - Navigation
@@ -62,26 +57,11 @@ class LoginViewController: UIViewController {
     func handleUserPoolSignUp () {
 
         if !AWSIdentityManager.defaultIdentityManager().loggedIn {
-
-            let storyboard = UIStoryboard(name: "UserPools", bundle: nil)
-            let viewController = storyboard.instantiateViewControllerWithIdentifier("SignUp")
-            self.presentViewController(viewController, animated:true, completion:nil);
-            
+            vista.cambiarVista("UserPools", vista: "SignUp", vistaActual: self)
         }
     }
     
-    
-
-    
-
     func dimissController() {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
-    
-
-    
- 
-    
-
-
 }

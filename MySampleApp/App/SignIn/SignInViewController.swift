@@ -43,6 +43,8 @@ class SignInViewController: UIViewController {
         super.viewDidLoad()
          print("Sign In Loading.")
         
+
+        
             didSignInObserver =  NSNotificationCenter.defaultCenter().addObserverForName(AWSIdentityManagerDidSignInNotification,
                 object: AWSIdentityManager.defaultIdentityManager(),
                 queue: NSOperationQueue.mainQueue(),
@@ -108,11 +110,7 @@ class SignInViewController: UIViewController {
             // If no error reported by SignInProvider, discard the sign-in view controller.
             if error == nil {
                 dispatch_async(dispatch_get_main_queue(),{
-                    let storyboard = UIStoryboard(name: "LogInStory", bundle: nil)
-                    let viewController = storyboard.instantiateViewControllerWithIdentifier("Login")
-                    self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
-                    viewController.dismissViewControllerAnimated(false, completion: nil)
-                    
+                   // self.dismissViewControllerAnimated(true, completion: nil)
                 })
             }
              print("result = \(result), error = \(error)")
