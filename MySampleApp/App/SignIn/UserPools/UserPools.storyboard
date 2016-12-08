@@ -392,6 +392,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="8x7-jQ-r9f">
+                                <rect key="frame" x="56" y="217" width="284" height="132"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="502916287.48327702">
+                                    <!--2016-12-08 18:58:07 +0000-->
+                                </date>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -497,63 +504,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P29-kN-brQ">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P29-kN-brQ">
                                 <rect key="frame" x="20" y="20" width="560" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" id="Wad-Xv-3RG"/>
-                                </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFt-qV-XcV">
-                                <rect key="frame" x="20" y="20" width="64" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="64" id="dcK-Ke-JrE"/>
-                                    <constraint firstAttribute="height" constant="21" id="fym-IO-YI9"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kV7-Fv-gSa">
-                                <rect key="frame" x="20" y="81" width="560" height="34"/>
-                                <color key="backgroundColor" red="0.9137254901960784" green="0.35294117647058826" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Forgot Password">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="forgot password no-btn" translatesAutoresizingMaskIntoConstraints="NO" id="Kie-De-SKP">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kV7-Fv-gSa">
+                                <rect key="frame" x="-7" y="302" width="389" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="send_button">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="onForgotPassword:" destination="P72-4o-dGU" eventType="touchUpInside" id="307-wt-tcz"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CLv-tS-SbV">
-                                <rect key="frame" x="20" y="43" width="560" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CLv-tS-SbV">
+                                <rect key="frame" x="52" y="226" width="560" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r8l-NY-GxG">
-                                <rect key="frame" x="276" y="562" width="48" height="30"/>
-                                <state key="normal" title="Cancel"/>
-                                <connections>
-                                    <action selector="onCancel:" destination="P72-4o-dGU" eventType="touchUpInside" id="lOr-qV-0kt"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="P29-kN-brQ" firstAttribute="top" secondItem="PN8-a0-H46" secondAttribute="bottom" id="DwK-sx-Ac1"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="P29-kN-brQ" secondAttribute="trailing" id="JYS-vP-qGb"/>
-                            <constraint firstItem="CLv-tS-SbV" firstAttribute="top" secondItem="hFt-qV-XcV" secondAttribute="bottom" constant="2" id="QD9-Jo-bSK"/>
-                            <constraint firstItem="CLv-tS-SbV" firstAttribute="leading" secondItem="kV7-Fv-gSa" secondAttribute="leading" id="UFa-Dw-TBc"/>
-                            <constraint firstItem="kV7-Fv-gSa" firstAttribute="top" secondItem="CLv-tS-SbV" secondAttribute="bottom" constant="8" symbolic="YES" id="VDr-du-nL5"/>
-                            <constraint firstItem="P29-kN-brQ" firstAttribute="leading" secondItem="mvy-xA-fuB" secondAttribute="leadingMargin" id="WWc-nu-ei9"/>
-                            <constraint firstItem="CLv-tS-SbV" firstAttribute="trailing" secondItem="P29-kN-brQ" secondAttribute="trailing" id="b50-6g-ZO6"/>
-                            <constraint firstItem="hFt-qV-XcV" firstAttribute="top" secondItem="P29-kN-brQ" secondAttribute="top" id="dYG-h3-sT8"/>
-                            <constraint firstItem="hFt-qV-XcV" firstAttribute="leading" secondItem="P29-kN-brQ" secondAttribute="leading" id="dy6-5k-WYv"/>
-                            <constraint firstItem="CLv-tS-SbV" firstAttribute="trailing" secondItem="kV7-Fv-gSa" secondAttribute="trailing" id="ewV-q3-Cn7"/>
-                            <constraint firstItem="FH6-oT-BVw" firstAttribute="top" secondItem="r8l-NY-GxG" secondAttribute="bottom" constant="8" symbolic="YES" id="lO6-ht-l6c"/>
-                            <constraint firstItem="r8l-NY-GxG" firstAttribute="centerX" secondItem="kV7-Fv-gSa" secondAttribute="centerX" id="vxs-M4-xLa"/>
-                            <constraint firstItem="hFt-qV-XcV" firstAttribute="leading" secondItem="CLv-tS-SbV" secondAttribute="leading" id="yal-ac-v9E"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wcH-Ol-TbY"/>
                     <connections>
@@ -667,7 +644,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="forgot password no-btn" width="375" height="667"/>
         <image name="next_yellow" width="255" height="65"/>
+        <image name="send_button" width="253" height="63"/>
         <image name="sign up_1-1" width="375" height="667"/>
         <image name="sign up_2 no-btn" width="375" height="667"/>
         <image name="sign up_3 no-btn" width="375" height="667"/>
