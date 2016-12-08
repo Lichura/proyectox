@@ -45,8 +45,8 @@ class CloudLogicAPI {
     init(displayName: String, apiDescription: String?, paths: [String], endPoint: String, apiClient: AWSAPIGatewayClient) {
         self.displayName = displayName
         self.apiDescription = apiDescription
-        self.paths = paths
-        self.endPoint = endPoint
+        self.paths = ["/pets"]
+        self.endPoint = "https://bw7mtqti03.execute-api.us-east-1.amazonaws.com/prueba/"
         self.apiClient = apiClient
     }
 }

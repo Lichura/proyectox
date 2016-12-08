@@ -14,6 +14,7 @@ class LoginViewController: UIViewController {
     var vista = Vistas()
 
     @IBAction func LoginButton(sender: UIButton) {
+        
         vista.cambiarVista("SignIn", vista: "SignIn", vistaActual: self)
 
         
@@ -29,8 +30,13 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        let storyboard = UIStoryboard(name: "FirstLaunch", bundle: nil)
+        let viewController = storyboard.instantiateViewControllerWithIdentifier("FirstLaunch")
+        viewController.dismissViewControllerAnimated(false, completion: nil)
+        
         if AWSIdentityManager.defaultIdentityManager().loggedIn {
             vista.cambiarVista("Main", vista: "Main", vistaActual: self)
+            self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
         }
 
         crearNuevoUsuario.addTarget(self, action: #selector(handleUserPoolSignUp), forControlEvents: .TouchUpInside)

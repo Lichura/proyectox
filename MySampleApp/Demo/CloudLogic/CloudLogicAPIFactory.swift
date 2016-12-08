@@ -19,10 +19,10 @@ class CloudLogicAPIFactory {
         
         return [
             CloudLogicAPI(displayName: "proyectoX",
-                apiDescription: "api general",
+                apiDescription: "Pet Store",
                 paths: [
-                 "/items", "/items/123",                ],
-                endPoint: "https://euryb3pqk8.execute-api.us-east-1.amazonaws.com/Development",
+                 "/pets", "/pets/123",                ],
+                endPoint: "https://bw7mtqti03.execute-api.us-east-1.amazonaws.com/prueba/",
                 apiClient: AWSAPI_EURYB3PQK8_ProyectoXMobileHubClient.init(forKey: AWSCloudLogicDefaultConfigurationKey)
             ),
         ]
