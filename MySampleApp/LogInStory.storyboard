@@ -21,19 +21,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sign up no-btn" translatesAutoresizingMaskIntoConstraints="NO" id="1gl-gj-mQi">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sign up no-btn" translatesAutoresizingMaskIntoConstraints="NO" id="1gl-gj-mQi">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mqi-K5-uJC">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mqi-K5-uJC">
                                 <rect key="frame" x="0.0" y="591" width="375" height="76"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="SIGN UP" image="sign_up"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gop-hv-X5G">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gop-hv-X5G">
                                 <rect key="frame" x="0.0" y="516" width="375" height="78"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="LOGIN" image="log_in_1"/>
                                 <connections>
@@ -42,6 +39,18 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1960784314" green="0.57254901960000004" blue="0.81176470590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Mqi-K5-uJC" firstAttribute="leading" secondItem="k44-E2-Lvh" secondAttribute="leading" id="0ht-vv-0F6"/>
+                            <constraint firstItem="X2G-HE-AvO" firstAttribute="top" secondItem="Mqi-K5-uJC" secondAttribute="bottom" id="9gw-WE-IMZ"/>
+                            <constraint firstItem="1gl-gj-mQi" firstAttribute="top" secondItem="k44-E2-Lvh" secondAttribute="top" id="Fpm-Bb-1YG"/>
+                            <constraint firstItem="X2G-HE-AvO" firstAttribute="top" secondItem="1gl-gj-mQi" secondAttribute="bottom" id="GhI-W9-M5L"/>
+                            <constraint firstItem="Gop-hv-X5G" firstAttribute="leading" secondItem="k44-E2-Lvh" secondAttribute="leading" id="LvO-Zk-YGT"/>
+                            <constraint firstAttribute="trailing" secondItem="Gop-hv-X5G" secondAttribute="trailing" id="Ubw-2F-4Qb"/>
+                            <constraint firstAttribute="trailing" secondItem="Mqi-K5-uJC" secondAttribute="trailing" id="XSv-OH-Q3A"/>
+                            <constraint firstItem="Mqi-K5-uJC" firstAttribute="top" secondItem="Gop-hv-X5G" secondAttribute="bottom" constant="-3" id="be3-3W-cda"/>
+                            <constraint firstAttribute="trailing" secondItem="1gl-gj-mQi" secondAttribute="trailing" id="fM1-ip-38I"/>
+                            <constraint firstItem="1gl-gj-mQi" firstAttribute="leading" secondItem="k44-E2-Lvh" secondAttribute="leading" id="h72-xN-QJk"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Iniciar Sesion" id="XDq-vJ-Prz"/>
                     <connections>

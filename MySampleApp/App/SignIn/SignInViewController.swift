@@ -20,6 +20,9 @@ import GoogleSignIn
 class SignInViewController: UIViewController {
     @IBOutlet weak var anchorView: UIView!
 
+    @IBAction func LogInButton(sender: UIButton) {
+        handleCustomSignIn()
+    }
     @IBOutlet weak var facebookButton: UIButton!
 
     @IBOutlet weak var googleButton: UIButton!
@@ -89,10 +92,10 @@ class SignInViewController: UIViewController {
                 }
                 view.addConstraint(NSLayoutConstraint(item: googleButton, attribute: .Top, relatedBy: .Equal, toItem: anchorViewForGoogle(), attribute: .Bottom, multiplier: 1, constant: 8.0))
                 // Custom UI Setup
-        customProviderButton.addTarget(self, action: #selector(handleCustomSignIn), forControlEvents: .TouchUpInside)
-        customCreateAccountButton.addTarget(self, action: #selector(handleUserPoolSignUp), forControlEvents: .TouchUpInside)
-        customForgotPasswordButton.addTarget(self, action: #selector(handleUserPoolForgotPassword), forControlEvents: .TouchUpInside)
-        customProviderButton.setImage(UIImage(named: "LoginButton"), forState: .Normal)
+            //customProviderButton.addTarget(self, action: #selector(handleCustomSignIn), forControlEvents: .TouchUpInside)
+            //customCreateAccountButton.addTarget(self, action: #selector(handleUserPoolSignUp), forControlEvents: .TouchUpInside)
+            customForgotPasswordButton.addTarget(self, action: #selector(handleUserPoolForgotPassword), forControlEvents: .TouchUpInside)
+            //customProviderButton.setImage(UIImage(named: "LoginButton"), forState: .Normal)
     }
     
     deinit {
@@ -110,7 +113,8 @@ class SignInViewController: UIViewController {
             // If no error reported by SignInProvider, discard the sign-in view controller.
             if error == nil {
                 dispatch_async(dispatch_get_main_queue(),{
-                   // self.dismissViewControllerAnimated(true, completion: nil)
+                    self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+                    self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
                 })
             }
              print("result = \(result), error = \(error)")

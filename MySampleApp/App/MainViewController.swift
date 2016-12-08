@@ -31,8 +31,8 @@ class MainViewController: UITableViewController {
         navigationController!.navigationBar.barTintColor = UIColor(red: 0xF5/255.0, green: 0x85/255.0, blue: 0x35/255.0, alpha: 1.0)
         navigationController!.navigationBar.tintColor = UIColor.whiteColor()
 
-            //presentFirstLaunchViewController()
-            presentSignInViewController()
+            presentFirstLaunchViewController()
+        //presentSignInViewController()
         
         var demoFeature = DemoFeature.init(
             name: NSLocalizedString("User Sign-in",
@@ -108,8 +108,8 @@ class MainViewController: UITableViewController {
     
     func presentFirstLaunchViewController() {
         if !AWSIdentityManager.defaultIdentityManager().loggedIn {
-            let storyboard = UIStoryboard(name: "FirstLaunch", bundle: nil)
-            let viewController = storyboard.instantiateViewControllerWithIdentifier("FirstLaunch")
+            let storyboard = UIStoryboard(name: "LogInStory", bundle: nil)
+            let viewController = storyboard.instantiateViewControllerWithIdentifier("Login")
             self.presentViewController(viewController, animated: true, completion: nil)
         }
     }
@@ -166,3 +166,4 @@ class FeatureDescriptionViewController: UIViewController {
         navigationItem.backBarButtonItem = UIBarButtonItem.init(title: "Back", style: .Plain, target: nil, action: nil)
     }
 }
+

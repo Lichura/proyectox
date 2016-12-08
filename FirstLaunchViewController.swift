@@ -15,6 +15,8 @@ class FirstLaunchViewController: UIViewController {
     
     @IBAction func LastNextButton(sender: UIButton) {
         vista.cambiarVista("LogInStory", vista: "Login", vistaActual: self)
+        //self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+
     }
 
     override func viewDidLoad() {
