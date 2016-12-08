@@ -10,11 +10,10 @@ import UIKit
 
 class FirstLaunchViewController: UIViewController {
 
-    @IBAction func LastNextButton(sender: BotonRedondo) {
-       
+    @IBAction func LastNextButton(sender: UIButton) {
         presentSignInViewController()
-        
     }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
