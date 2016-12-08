@@ -31,8 +31,8 @@ class MainViewController: UITableViewController {
         navigationController!.navigationBar.barTintColor = UIColor(red: 0xF5/255.0, green: 0x85/255.0, blue: 0x35/255.0, alpha: 1.0)
         navigationController!.navigationBar.tintColor = UIColor.whiteColor()
 
-            presentFirstLaunchViewController()
-            //presentSignInViewController()
+            //presentFirstLaunchViewController()
+            presentSignInViewController()
         
         var demoFeature = DemoFeature.init(
             name: NSLocalizedString("User Sign-in",
