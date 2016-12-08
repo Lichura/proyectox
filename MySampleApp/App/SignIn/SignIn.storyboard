@@ -44,21 +44,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-<<<<<<< HEAD
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPY-ae-1Gg">
-                                <rect key="frame" x="186" y="365" width="42" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Log In"/>
-                                <connections>
-                                    <action selector="LogInButton:" destination="zFR-uy-L27" eventType="touchUpInside" id="xgx-Bo-PIL"/>
-=======
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bP2-1m-7Ur">
                                 <rect key="frame" x="65" y="506" width="307" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="log_in_2"/>
                                 <connections>
                                     <action selector="loginbutton:" destination="zFR-uy-L27" eventType="touchUpInside" id="wuj-8T-VW0"/>
->>>>>>> origin/pre-master
                                 </connections>
                             </button>
                         </subviews>
