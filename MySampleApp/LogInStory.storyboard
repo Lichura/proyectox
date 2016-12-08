@@ -37,7 +37,7 @@
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="LOGIN" image="log_in_1"/>
                                 <connections>
-                                    <action selector="LoginButton:" destination="4Z9-yS-pbB" eventType="touchUpInside" id="K0V-Oc-MhP"/>
+                                    <action selector="LoginButton:" destination="4Z9-yS-pbB" eventType="touchUpInside" id="Z2y-3D-n5j"/>
                                 </connections>
                             </button>
                         </subviews>

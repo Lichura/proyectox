@@ -18,6 +18,9 @@ import FBSDKLoginKit
 import GoogleSignIn
 
 class SignInViewController: UIViewController {
+    @IBAction func loginbutton(sender: UIButton) {
+        handleCustomSignIn()
+    }
     @IBOutlet weak var anchorView: UIView!
 
     @IBOutlet weak var facebookButton: UIButton!
@@ -43,6 +46,8 @@ class SignInViewController: UIViewController {
         super.viewDidLoad()
          print("Sign In Loading.")
         
+
+        
             didSignInObserver =  NSNotificationCenter.defaultCenter().addObserverForName(AWSIdentityManagerDidSignInNotification,
                 object: AWSIdentityManager.defaultIdentityManager(),
                 queue: NSOperationQueue.mainQueue(),
@@ -50,47 +55,12 @@ class SignInViewController: UIViewController {
                     // perform successful login actions here
             })
 
-                // Facebook login permissions can be optionally set, but must be set
-                // before user authenticates.
-                AWSFacebookSignInProvider.sharedInstance().setPermissions(["public_profile"]);
-                
-                // Facebook login behavior can be optionally set, but must be set
-                // before user authenticates.
-//                AWSFacebookSignInProvider.sharedInstance().setLoginBehavior(FBSDKLoginBehavior.Web.rawValue)
-                
-                // Facebook UI Setup
-                facebookButton.addTarget(self, action: #selector(SignInViewController.handleFacebookLogin), forControlEvents: .TouchUpInside)
-                let facebookButtonImage: UIImage? = UIImage(named: "FacebookButton")
-                if let facebookButtonImage = facebookButtonImage{
-                    facebookButton.setImage(facebookButtonImage, forState: .Normal)
-                } else {
-                     print("Facebook button image unavailable. We're hiding this button.")
-                    facebookButton.hidden = true
-                }
-                view.addConstraint(NSLayoutConstraint(item: facebookButton, attribute: .Top, relatedBy: .Equal, toItem: anchorViewForFacebook(), attribute: .Bottom, multiplier: 1, constant: 8.0))
 
-                // Google login scopes can be optionally set, but must be set
-                // before user authenticates.
-                AWSGoogleSignInProvider.sharedInstance().setScopes(["profile", "openid"])
-                
-                // Sets up the view controller that the Google signin will be launched from.
-                AWSGoogleSignInProvider.sharedInstance().setViewControllerForGoogleSignIn(self)
-                
-                // Google UI Setup
-                googleButton.addTarget(self, action: #selector(SignInViewController.handleGoogleLogin), forControlEvents: .TouchUpInside)
-                let googleButtonImage: UIImage? = UIImage(named: "GoogleButton")
-                if let googleButtonImage = googleButtonImage {
-                    googleButton.setImage(googleButtonImage, forState: .Normal)
-                } else {
-                     print("Google button image unavailable. We're hiding this button.")
-                    googleButton.hidden = true
-                }
-                view.addConstraint(NSLayoutConstraint(item: googleButton, attribute: .Top, relatedBy: .Equal, toItem: anchorViewForGoogle(), attribute: .Bottom, multiplier: 1, constant: 8.0))
                 // Custom UI Setup
-        customProviderButton.addTarget(self, action: #selector(handleCustomSignIn), forControlEvents: .TouchUpInside)
-        customCreateAccountButton.addTarget(self, action: #selector(handleUserPoolSignUp), forControlEvents: .TouchUpInside)
+        //customProviderButton.addTarget(self, action: #selector(handleCustomSignIn), forControlEvents: .TouchUpInside)
+        //customCreateAccountButton.addTarget(self, action: #selector(handleUserPoolSignUp), forControlEvents: .TouchUpInside)
         customForgotPasswordButton.addTarget(self, action: #selector(handleUserPoolForgotPassword), forControlEvents: .TouchUpInside)
-        customProviderButton.setImage(UIImage(named: "LoginButton"), forState: .Normal)
+        //customProviderButton.setImage(UIImage(named: "LoginButton"), forState: .Normal)
     }
     
     deinit {
@@ -108,11 +78,7 @@ class SignInViewController: UIViewController {
             // If no error reported by SignInProvider, discard the sign-in view controller.
             if error == nil {
                 dispatch_async(dispatch_get_main_queue(),{
-                    let storyboard = UIStoryboard(name: "LogInStory", bundle: nil)
-                    let viewController = storyboard.instantiateViewControllerWithIdentifier("Login")
-                    self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
-                    viewController.dismissViewControllerAnimated(false, completion: nil)
-                    
+                   // self.dismissViewControllerAnimated(true, completion: nil)
                 })
             }
              print("result = \(result), error = \(error)")
