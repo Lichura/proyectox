@@ -330,7 +330,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Continuar" image="next_yellow"/>
                                 <connections>
-                                    <segue destination="yxy-aK-ScA" kind="show" id="qXr-1O-F3z"/>
+                                    <segue destination="9y6-A9-xYn" kind="show" id="V90-lW-K4c"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NnZ-Nu-h8W">
@@ -398,47 +398,6 @@
             <point key="canvasLocation" x="583" y="-43"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="Nfr-eh-h7a">
-            <objects>
-                <viewController id="yxy-aK-ScA" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="gr8-FC-bb1"/>
-                        <viewControllerLayoutGuide type="bottom" id="DSp-Pn-rr0"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="SQd-o1-zOG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sign up_3 no-btn" translatesAutoresizingMaskIntoConstraints="NO" id="aPG-Ec-yr0">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Ed-s5-YUA">
-                                <rect key="frame" x="54" y="185" width="291" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gkI-py-HGd">
-                                <rect key="frame" x="70" y="367" width="305" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="next_yellow"/>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="aPG-Ec-yr0" firstAttribute="leading" secondItem="SQd-o1-zOG" secondAttribute="leading" id="PII-Hz-POJ"/>
-                            <constraint firstItem="DSp-Pn-rr0" firstAttribute="top" secondItem="aPG-Ec-yr0" secondAttribute="bottom" id="SRK-O8-DyQ"/>
-                            <constraint firstAttribute="trailing" secondItem="aPG-Ec-yr0" secondAttribute="trailing" id="VVY-WP-kvG"/>
-                            <constraint firstItem="aPG-Ec-yr0" firstAttribute="top" secondItem="SQd-o1-zOG" secondAttribute="top" id="yAZ-3y-UBx"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="trA-OD-Qoy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1990" y="-43"/>
-        </scene>
-        <!--View Controller-->
         <scene sceneID="gYJ-Uv-dYx">
             <objects>
                 <viewController id="9y6-A9-xYn" sceneMemberID="viewController">
@@ -450,36 +409,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LAT-XP-02o">
-                                <rect key="frame" x="16" y="63" width="560" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sign up_4 no-btn-1" translatesAutoresizingMaskIntoConstraints="NO" id="ETS-lV-8UC">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nueva Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LAT-XP-02o">
+                                <rect key="frame" x="42" y="207" width="289" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" secureTextEntry="YES"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q1B-aQ-RW2">
-                                <rect key="frame" x="16" y="45" width="55" height="15"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pu7-dC-RhY">
-                                <rect key="frame" x="154" y="401" width="67" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pu7-dC-RhY">
+                                <rect key="frame" x="60" y="467" width="255" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Continuar"/>
+                                <state key="normal" image="next_yellow"/>
                                 <connections>
                                     <segue destination="hsl-6O-qS1" kind="show" id="Xj8-Qi-kUe"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirmar Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uch-dH-IPX">
+                                <rect key="frame" x="42" y="349" width="289" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" secureTextEntry="YES"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="LAT-XP-02o" firstAttribute="top" secondItem="Q1B-aQ-RW2" secondAttribute="bottom" constant="3" id="MyH-L5-qS6"/>
-                            <constraint firstItem="Q1B-aQ-RW2" firstAttribute="leading" secondItem="LAT-XP-02o" secondAttribute="leading" id="wq7-Uc-cOp"/>
+                            <constraint firstItem="ETS-lV-8UC" firstAttribute="top" secondItem="t6y-F3-kQg" secondAttribute="top" id="Oxt-q6-8J3"/>
+                            <constraint firstAttribute="trailing" secondItem="ETS-lV-8UC" secondAttribute="trailing" id="Yi3-yQ-VJv"/>
+                            <constraint firstItem="ETS-lV-8UC" firstAttribute="leading" secondItem="t6y-F3-kQg" secondAttribute="leading" id="fsQ-2h-Ke1"/>
+                            <constraint firstItem="1bZ-Cu-RHX" firstAttribute="top" secondItem="ETS-lV-8UC" secondAttribute="bottom" id="jrk-1b-g9S"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wjG-h6-jSf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2658" y="-33"/>
+            <point key="canvasLocation" x="2013.5999999999999" y="-43.628185907046479"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="jMx-hf-rOP">
@@ -493,35 +458,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Define tu nivel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VSp-Jp-bei">
-                                <rect key="frame" x="166" y="53" width="109" height="21"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sign up_5 no-btn" translatesAutoresizingMaskIntoConstraints="NO" id="sPG-a6-g4L">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ia-Px-Ddy">
+                                <rect key="frame" x="60" y="164" width="80" height="136"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ia-Px-Ddy">
-                                <rect key="frame" x="80" y="197" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" image="beginner"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MgB-VS-GUg">
-                                <rect key="frame" x="154" y="197" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MgB-VS-GUg">
+                                <rect key="frame" x="148" y="164" width="80" height="136"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" image="intermediate"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PmG-dW-VGr">
-                                <rect key="frame" x="252" y="197" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8MM-WS-wPV">
+                                <rect key="frame" x="60" y="401" width="255" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" image="start_button_level"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PmG-dW-VGr">
+                                <rect key="frame" x="236" y="164" width="87" height="136"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="advanced"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sPG-a6-g4L" firstAttribute="leading" secondItem="311-wr-ESj" secondAttribute="leading" id="Oii-xE-I3p"/>
+                            <constraint firstAttribute="trailing" secondItem="sPG-a6-g4L" secondAttribute="trailing" id="Vxd-3Z-s8t"/>
+                            <constraint firstItem="sPG-a6-g4L" firstAttribute="top" secondItem="311-wr-ESj" secondAttribute="top" id="viT-AK-VIK"/>
+                            <constraint firstItem="syN-Hp-aQ5" firstAttribute="top" secondItem="sPG-a6-g4L" secondAttribute="bottom" id="y5M-0Y-I4b"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fCN-ya-eps" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3313" y="-33"/>
+            <point key="canvasLocation" x="2736.8000000000002" y="-43.628185907046479"/>
         </scene>
         <!--Forgot Password View Controller-->
         <scene sceneID="NvC-5J-jny">
@@ -646,7 +618,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="advanced" width="87" height="136"/>
+        <image name="beginner" width="80" height="136"/>
         <image name="forgot password no-btn" width="375" height="667"/>
+        <image name="intermediate" width="80" height="136"/>
         <image name="new_pass_button" width="253" height="63"/>
         <image name="new_password-1" width="375" height="667"/>
         <image name="next_yellow" width="255" height="65"/>
@@ -654,5 +629,8 @@
         <image name="sign up_1 no-btn-1" width="375" height="667"/>
         <image name="sign up_2 no-btn" width="375" height="667"/>
         <image name="sign up_3 no-btn" width="375" height="667"/>
+        <image name="sign up_4 no-btn-1" width="375" height="667"/>
+        <image name="sign up_5 no-btn" width="375" height="667"/>
+        <image name="start_button_level" width="255" height="65"/>
     </resources>
 </document>
